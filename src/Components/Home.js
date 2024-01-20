@@ -3,6 +3,7 @@ import Carousel from './Carousel.js';
 import Testimonials from './Testimonials.js';
 import MyMap from './Map.js';
 import OtpLogin from './Login/OtpLogin.js';
+import Marquee from './Marquee.js';
 
 function Home() {
   return (
@@ -21,7 +22,12 @@ function Home() {
         <h2 className='font-sans font-semibold text-3xl pl-3 text-white mb-10'>Testimonials</h2>
         <Testimonials />
 
+        <h2 className='font-sans font-semibold text-3xl pl-3 text-white my-10'>Our Interns Work At</h2>
+        <Marquee />
+
       </div>
+
+      
 
       <OtpLogin />
 

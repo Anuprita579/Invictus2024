@@ -7,6 +7,11 @@ import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 import Home from "./Components/Home";
 import Search from './Components/Search';
 import Error from './Components/Error';
+import MachineLearning from './Components/MachineLearning';
+import ArtificialIntelligence from './Components/ArtificialIntelligence'
+import WebDevelopment from './Components/WebDevelopment';
+import UIUXDevelopment from './Components/UIUXDevelopment';
+import DatabaseManager from './Components/DatabaseManager';
 
 const appRouter = createBrowserRouter([
   {
@@ -21,6 +26,26 @@ const appRouter = createBrowserRouter([
       {
         path: "/search",
         element: <Search />
+      },
+      {
+        path: "/searchFor/machine-learning",
+        element: <MachineLearning />
+      },
+      {
+        path: "/searchFor/artificial-intelligence",
+        element: <ArtificialIntelligence />
+      },
+      {
+        path: "/searchFor/web-development",
+        element: <WebDevelopment />
+      },
+      {
+        path: "/searchFor/uiux-development",
+        element: <UIUXDevelopment />
+      },
+      {
+        path: "/searchFor/database-manager",
+        element: <DatabaseManager />
       },
       
 

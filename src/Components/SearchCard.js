@@ -19,7 +19,7 @@ const searchCard = [
     },
     {
         card_id: "1414235077428-338989a2e8c0",
-        title: "UI UX Development",
+        title: "UIUX Development",
         img_url: "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg?size=626&ext=jpg&ga=GA1.1.399333540.1695975010&semt=ais"
     },
     {
