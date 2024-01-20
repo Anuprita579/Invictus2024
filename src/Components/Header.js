@@ -1,22 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Logo from "../assets/company_logo.jpg";
+import { Link } from 'react-router-dom';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
-
-import ApiIcon from '@mui/icons-material/Api';
 
 function Header() {
   return (
     <>
-        <div className='bg-indigo-900 flex justify-between py-3 sticky top-0 z-50 w-full '>
+        <div className='bg-indigo-900 flex justify-between sticky top-0 z-50 w-full '>
             <div className='text-amber-300 flex'>
-                <ApiIcon className='mx-5 mt-2'></ApiIcon>
-                <h1 className='text-amber-300 mx-5 text-3xl font-bold max-sm:text-xl'>SkillSpire</h1>
+                <img src={Logo} alt='logo' className='h-16' />
             </div>
 
             <div className='text-white space-x-4 mr-5 flex align-middle items-center' >
                 <NotificationsIcon></NotificationsIcon>
-                <button>Login</button>
-                <button>Register</button>
+                <Link to="/login"> <button>Login</button> </Link>
                 <p>Hire Talent</p>
             </div>
         </div>

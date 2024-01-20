@@ -23,13 +23,12 @@ function Home() {
         <Testimonials />
 
         <h2 className='font-sans font-semibold text-3xl pl-3 text-white my-10'>Our Interns Work At</h2>
-        <Marquee />
+        <div className='my-10 mb-20'>
+            <Marquee/>
+        </div>
+        
 
       </div>
-
-      
-
-      <OtpLogin />
 
 
     </div>

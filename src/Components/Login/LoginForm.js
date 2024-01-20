@@ -16,6 +16,9 @@ function LoginForm() {
             alert("Invalid Phone Number");
             return;
         }
+        else{
+            alert("OTP has been sent to" + phoneno);
+        }
 
         //API call
         //Show Otp Field
@@ -27,10 +30,10 @@ function LoginForm() {
     }
   return (
     <>
-        <div>
-            {!showOtp? <form onSubmit={handlePhoneSubmit}>
-                <input type="text" value={phoneno} onChange={handlePhoneno} placeholder='Enter Phone Number'/>
-                <button>Submit</button>
+        <div className='bg-slate-100 '>
+            {!showOtp? <form onSubmit={handlePhoneSubmit} className='flex flex-col justify-center align-middle items-center'>
+                <input type="text" value={phoneno} onChange={handlePhoneno} placeholder='Enter Phone Number' className='p-3 outline-blue-200'/>
+                <button className='bg-blue-400 text-white p-2 m-4 rounded-xl px-5'>Submit</button>
             </form> : (
                 <div>
                     <p>Otp sent to {phoneno}</p>

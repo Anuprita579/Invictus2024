@@ -1,0 +1,360 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-container {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-container img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.text-boxes {
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.text-boxes h1 {
+    color: #3D9EF7;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.text-boxes h5 {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.right-container {
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+}
+
+.right-container h1 {
+    color: #3D9EF7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #3D9EF7;
+    outline: none;
+    resize: none;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    color: #666;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+    color: #3D9EF7;
+    font-size: 12px;
+    transform: translateY(-150%);
+}
+
+.login-btn {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.login-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-otp,
+.register-now {
+    color: #3D9EF7;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.login-otp a,
+.register-now a {
+    color: #3D9EF7;
+    text-decoration: none;
+}
+
+.signup-btn{
+    background-color: #3D9EF7;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    margin: 20px;
+}
+
+.left-container {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.left-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+.text-boxes {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.text-boxes h1 {
+    color: #3D9EF7;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.text-boxes h5 {
+    color: #3D9EF7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.right-container {
+    width: 60%;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.right-container h1 {
+    color: #3D9EF7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-input,
+.phone-input,
+.location-input,
+.experience-input,
+.cv-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    text-align: center;
+    color: grey;
+}
+
+.user-input:focus,
+.phone-input:focus,
+.location-input:focus,
+.experience-input:focus,
+.cv-input:focus {
+    border-bottom: 2px solid #3D9EF7;
+}
+
+.phone-input:invalid {
+    border-bottom: 2px solid red;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 80%;
+    margin: 10px;
+    text-align: center;
+}
+
+.interests-dropdown {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+}
+
+.interests-dropdown:focus {
+    border-bottom: 2px solid #3D9EF7;
+}
+
+.interests-options {
+    display: none;
+    position: absolute;
+    width: calc(100% - 22px);
+    max-height: 120px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1;
+}
+
+.interests-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cv-upload-btn {
+    padding: 8px;
+    background-color: #3D9EF7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(80% - 22px);
+    margin: 10px 0;
+}
+
+.file-input-container {
+    position: relative;
+    width: 80%;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cv-input {
+    width: calc(70% - 30px);
+    margin-right: 10px;
+    display: none;
+}
+
+.experience-field {
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.experience-label {
+    color: #3D9EF7;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.experience-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #3D9EF7;
+    outline: none;
+    text-align: center;
+    color: #3D9EF7;
+}
+
+.experience-input:focus {
+    border-bottom: 2px solid #3D9EF7;
+}
+
+.login-btn {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.selected-interests {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.selected-interest {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-interest {
+    margin-left: 5px;
+    cursor: pointer;
+}

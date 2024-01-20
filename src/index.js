@@ -12,6 +12,8 @@ import ArtificialIntelligence from './Components/ArtificialIntelligence'
 import WebDevelopment from './Components/WebDevelopment';
 import UIUXDevelopment from './Components/UIUXDevelopment';
 import DatabaseManager from './Components/DatabaseManager';
+import Registration from './Components/Registration';
+import OtpLogin from './Components/Login/OtpLogin';
 
 const appRouter = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/searchFor/database-manager",
         element: <DatabaseManager />
+      },
+      {
+        path: "/login",
+        element: <Registration />
+      },
+      {
+        path: "/otp",
+        element: <OtpLogin />
       },
       
 
