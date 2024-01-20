@@ -8,16 +8,16 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Footer() {
   return (
     <>
-        <div className='bg-black text-center w-full text-white pl-48 max-sm:p-0'>
+        <div className='bg-blue-950 text-center w-full text-white pl-48 max-sm:p-0 pt-2'>
             <div className='grid grid-cols-2 gap-2'>
-                <ol >
-                    <li className='hover:text-slate-400'>About Us</li>
-                    <li className='hover:text-slate-400'>Blog</li>
-                    <li className='hover:text-slate-400'>Our Services</li>
-                    <li className='hover:text-slate-400'>Contact Us</li>
+                <ol className='flex justify-center items-center align-middle' >
+                    <li className='hover:text-slate-400 mx-2'>About Us</li>
+                    <li className='hover:text-slate-400 mx-2'>Blog</li>
+                    <li className='hover:text-slate-400 mx-2'>Our Services</li>
+                    <li className='hover:text-slate-400 mx-2'>Contact Us</li>
                 </ol>
                 <div>
-                    <p className='mt-4 text-md font-semibold'>Connect us</p>
+                    <p className='text-md font-semibold'>Connect us</p>
                     <ol className='flex justify-center'>
                         <li className='m-2 hover:text-blue-400'> <FacebookIcon /> </li>
                         <li className='m-2 hover:text-pink-400'> <InstagramIcon /> </li>

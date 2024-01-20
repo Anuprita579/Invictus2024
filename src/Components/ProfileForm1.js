@@ -1,108 +1,77 @@
-import React from 'react'
+import React from 'react';
+import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import WorkIcon from '@mui/icons-material/Work';
+
+const sv = [
+    {
+        id: "001",
+        title: "Front-end Developer Intern",
+        company:"Accenture",
+        start_date: "Immediately",
+        type: "onsite",
+        ctc: "Unpaid",
+        exp: "3-5",
+        post: "2 days ago",
+        img: "https://cdn.theforage.com/vinternships/companyassets/DMrpG9KbbePZxGfSN/gJAzYWCDjzAsPxgYP/Acc_Logo_Black_Purple_RGB.png"
+    },
+    {
+        id: "002",
+        title: "WordPress Developer Intern",
+        company:"Adobe",
+        start_date: "Immediately",
+        type: "onsite",
+        ctc: "10000 - 15000",
+        exp: "1-5",
+        post: "2 weeks ago",
+        img: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg",
+    },
+    {
+        id: "003",
+        title: "Back-end Developer Intern",
+        company:"Intel",
+        start_date: "Immediately",
+        type: "onsite",
+        ctc: "30000 - 40000",
+        exp: "5-10",
+        post: "4 weeks ago",
+        img:"https://www.intel.com/content/dam/logos/intel-header-logo.svg"
+    }
+]
+
 
 function ProfileForm1() {
-    // Press Enter to trigger Submit Details button
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            document.querySelector('.login-btn').click();
-        }
-    });
-
-    function toggleInterestsOptions() {
-        const interestsOptions = document.getElementById('interestsOptions');
-        interestsOptions.style.display = (interestsOptions.style.display === 'block') ? 'none' : 'block';
-    }
-
-    function selectInterest(interest) {
-        const interestsDropdown = document.getElementById('userInterests');
-        interestsDropdown.value = interest;
-
-        const selectedInterestsContainer = document.getElementById('selectedInterests');
-        const interestTag = document.createElement('div');
-        interestTag.classList.add('selected-interest');
-        interestTag.innerHTML = `
-            <span>${interest}</span>
-            <span class="remove-interest" onclick="removeInterest('${interest}')">&#10006;</span>
-        `;
-        selectedInterestsContainer.appendChild(interestTag);
-
-        // Close the interests options
-        toggleInterestsOptions();
-    }
-
-    function removeInterest(interest) {
-        const interestsDropdown = document.getElementById('userInterests');
-        const optionToRemove = Array.from(interestsDropdown.options).find(option => option.value === interest);
-        optionToRemove.selected = false;
-
-        const selectedInterestsContainer = document.getElementById('selectedInterests');
-        const interestTagToRemove = Array.from(selectedInterestsContainer.children).find(tag => tag.firstChild.textContent === interest);
-        selectedInterestsContainer.removeChild(interestTagToRemove);
-
-        // Trigger change event to update selected interests
-        const event = new Event('change');
-        interestsDropdown.dispatchEvent(event);
-    }
-
-    // Function to simulate file upload
-    function uploadCV() {
-        const cvInput = document.getElementById('cvInput');
-        cvInput.click();
-    }
   return (
-    <>
-        <div class="container">
-        <div class="left-container">
-            <img src="logo.png" alt="Your Image">
-            <div class="text-boxes">
-                <h5 style="margin-top: 0;">Navigating Internship Horizons, Right at Your Fingertips</h5>
-            </div>
-        </div>
-        <div class="right-container">
-            <h1>User Details</h1>
-            <form class="user-form">
-                <input type="text" class="user-input" placeholder="Full Name" />
-                <input type="email" class="user-input" placeholder="Email" />
-                <input type="tel" class="phone-input" pattern="[0-9]{10}" placeholder="Phone Number (10 digits)" />
-                <input type="text" class="location-input" placeholder="Location" />
-                <div class="dropdown-container" >
-                    <input
-                        type="text"
-                        class="interests-dropdown"
-                        id="userInterests"
-                        placeholder="Select Interested Fields"
-                        style="align-items: center;"
-                        onclick="toggleInterestsOptions()"
-                    />
-                    <div class="interests-options" id="interestsOptions">
-                        <div class="interests-option" onclick="selectInterest('ML')">ML</div>
-                        <div class="interests-option" onclick="selectInterest('AL')">AL</div>
-                        <div class="interests-option" onclick="selectInterest('Web Development')">Web Development</div>
-                        <div class="interests-option" onclick="selectInterest('UI/UX')">UI/UX</div>
-                        <div class="interests-option" onclick="selectInterest('Database Manager')">Database Manager</div>
+    <div className='w-full h-full bg-blue-700'>
+        <div className='bg-gradient-to-br from-purple-700 to-blue-700 flex flex-col justify-center align-middle items-center p-6 py-10 w-full'>
+            <h1 className='text-5xl font-semibold text-white p-2 max-md:text-3xl'>Welcome Back! </h1>
+            <p className='text-yellow-400'>Search for new opportunities and get hired! </p>
+        </div> 
+        <div>
+            <h1 className='text-center text-2xl font-semibold text-white p-4'>Saved Jobs</h1>
+            <div className='flex flex-wrap w-full bg-blue-700 h-full justify-center'> 
+            {sv.map((mlitem)=>{
+                return(
+                    <div key={mlitem.id} className='bg-blue-300 m-2 p-3 w-2/5'>
+                        <img src={mlitem.img} alt='logo' className='h-5 my-1'/>
+                        <h1 className='font-semibold'>{mlitem.title}</h1>
+                        <h1 className='text-slate-700'>{mlitem.company}</h1>
+                        <h2>{mlitem.type}</h2>
+                        <div className='flex'>
+                            <p className='m-2'> <PlayCircleFilledWhiteIcon/> {mlitem.start_date}</p>
+                            <p className='m-2'> <PaymentsIcon /> {mlitem.ctc}</p>
+                            <p className='m-2'> <WorkIcon /> {mlitem.exp}</p>
+                        </div>
+                        <button className='bg-slate-400 text-white p-1'>{mlitem.post}</button>
+                        <hr className='m-2'></hr>
+                        <button className='bg-indigo-700 text-white p-2 float-right'>Apply</button>
                     </div>
-                </div>
-                <div class="selected-interests" id="selectedInterests"></div>
-                <div class="experience-field">
-                    <label class="experience-label"style="color:grey;">Experience</label>
-                    <input type="number" class="experience-input" placeholder="0" id="experienceYears" style="color:grey;"/>
-                </div>
-                <div class="file-input-container" style="justify-content: center;">
-                    <label for="cvInput" class="cv-input" onclick="uploadCV()">Choose File</label>
-                    <input type="file" id="cvInput" class="cv-input" />
-                    <button type="button" class="cv-upload-btn" onclick="uploadCV()">Upload CV</button>
-                </div>
-                <button class="login-btn">Submit Details</button>
-            </form>
+                )
+            })}
+        </div>  
         </div>
     </div>
-      
-    </>
   )
 }
 
 export default ProfileForm1
-
-
-
-

@@ -14,6 +14,9 @@ import UIUXDevelopment from './Components/UIUXDevelopment';
 import DatabaseManager from './Components/DatabaseManager';
 import Registration from './Components/Registration';
 import OtpLogin from './Components/Login/OtpLogin';
+import ProfileForm1 from './Components/ProfileForm1';
+import HireTalent from './Components/HireTalent';
+import ContactForm from './Components/ContactForm';
 
 const appRouter = createBrowserRouter([
   {
@@ -28,6 +31,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/search",
         element: <Search />
+      },
+      {
+        path: "/contactus",
+        element: <ContactForm />
       },
       {
         path: "/searchFor/machine-learning",
@@ -57,8 +64,15 @@ const appRouter = createBrowserRouter([
         path: "/otp",
         element: <OtpLogin />
       },
-      
-
+      {
+        path: "/dashboard",
+        element: <ProfileForm1/>
+      },
+      {
+        path: "/hire",
+        element: <HireTalent/>
+      },
+  
     ]
   }
 ]);

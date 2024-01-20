@@ -22,7 +22,7 @@ function Sidebar() {
         </div>
         </Link>
 
-        <Link to="/card"> 
+        <Link to="/contactus"> 
         <div className='flex text-xl  mx-5 my-3 text-white max-sm:justify-center  hover:text-amber-200'>
             <CallIcon className='mx-4'></CallIcon>
             <h3 className='max-sm:hidden max-lg:hidden'>ContactUs</h3>

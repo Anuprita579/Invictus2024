@@ -15,7 +15,7 @@ function Header() {
             <div className='text-white space-x-4 mr-5 flex align-middle items-center' >
                 <NotificationsIcon></NotificationsIcon>
                 <Link to="/login"> <button>Login</button> </Link>
-                <p>Hire Talent</p>
+                <Link to="/hire"> <p>Hire Talent</p></Link>
             </div>
         </div>
         
@@ -24,3 +24,4 @@ function Header() {
 }
 
 export default Header
+

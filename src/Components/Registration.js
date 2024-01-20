@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import { app } from './Firebase';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 import '../style.css';
+import ProfileForm1 from './ProfileForm1';
 
 
 export default function Registration() {
@@ -14,7 +15,10 @@ export default function Registration() {
     const [username, setUsername] = useState('')
     const [email, setemail] = useState('')
     const [password, setPassword] = useState('')
-    const [loginstate, setloginstate] = useState(true)
+    const [loginstate, setloginstate] = useState(true);
+    const [isLogin, setIsLogin] = useState(false);
+
+    const navigate = useNavigate();
 
 
     // useEffect(() => {
@@ -85,14 +89,17 @@ export default function Registration() {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                alert('login succesfull');
+                alert('Login succesfull');
+                navigate("/dashboard");
+                
+
                 console.log(username)
                 // ...
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log('login fail')
+                console.log('Login fail')
             });
 
 
@@ -103,7 +110,7 @@ export default function Registration() {
         <>
             {!loginstate && <div className="container">
                 <div className="left-container">
-                    <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705536000&semt=ais" alt="Your Image" />
+                    <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705536000&semt=ais" alt="loginimg" />
                     <div className="text-boxes">
                         <h1>SkillSpire</h1>
                         <h5 style={{ marginTop: '0' }}>Navigating Internship Horizons, Right at Your Fingertips</h5>
@@ -174,7 +181,7 @@ export default function Registration() {
 
                 < div className="container">
                     <div className="left-container">
-                        <img src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg" alt="Your Image" />
+                        <img src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg" alt="img" />
                         <div className="text-boxes">
                             <h1>SkillSpire</h1>
                             <h5>Navigating Internship Horizons, Right at Your Fingertips</h5>
@@ -192,7 +199,7 @@ export default function Registration() {
                                 <label htmlFor="password">Password</label>
                             </div>
                             <div className="inputBox">
-                                <button className="login-btn" type="button" onClick={login}>Login</button>
+                                <button className="login-btn" type="button" value={isLogin} onClick={login}>Login</button>
                             </div>
                         </form>
                         <div className="login-options">
