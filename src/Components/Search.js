@@ -122,14 +122,14 @@ function Search() {
     }
   return (
     <>
-        <div className='flex flex-col items-center align-middle bg-purple-100 w-full' >
+        <div className='flex flex-col items-center align-middle bg-blue-800 w-full' >
           <div className='w-full text-center'>
-            <input className='w-3/5 h-10 rounded-l-full px-5 mt-4 outline-purple-200' type="text" value={searchText} placeholder='Search for wedding destinations' onChange={handleChange}/>
-            <button className='bg-purple-700 font-bold text-white px-2 h-10 mt-4' >Search</button>
-            <button value={filterBox} onClick={toggleFilterBox} ><TuneIcon  className='ml-4' fontSize='medium'/></button>
+            <input className='w-3/5 h-10 rounded-l-full px-5 mt-4 outline-blue-200' type="text" value={searchText} placeholder='Search for job location' onChange={handleChange}/>
+            <button className='bg-blue-300 font-bold text-black px-2 h-10 mt-4' >Search</button>
+            <button value={filterBox} onClick={toggleFilterBox} ><TuneIcon  className='ml-4 text-white' fontSize='medium' /></button>
             <div className='flex justify-center relative right-10'>
               {suggestion.length>0 && (
-                <ul className='bg-purple-50 w-3/5 max-h-32 overflow-y-scroll scroll-smooth text-left'>
+                <ul className='bg-blue-100 w-3/5 max-h-32 overflow-y-scroll scroll-smooth text-left'>
                   {suggestion.map((suggest, index)=>{
                     return(
                       <li key={index} className='pl-4' onClick={()=>{handleSuggestion(suggest)}}>{suggest.destination}</li>

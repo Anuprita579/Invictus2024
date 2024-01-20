@@ -8,7 +8,7 @@ const MyMap = () => {
       <Geographies geography={worldMap}>
         {({ geographies }) =>
           geographies.map(geo => (
-            <Geography key={geo.rsmKey} geography={geo} className='fill-purple-700'/>
+            <Geography key={geo.rsmKey} geography={geo} className='fill-blue-300'/>
           ))
         }
       </Geographies>

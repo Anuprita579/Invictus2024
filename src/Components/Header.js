@@ -1,7 +1,7 @@
 import React from 'react'
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import PersonIcon from '@mui/icons-material/Person';
+
 import ApiIcon from '@mui/icons-material/Api';
 
 function Header() {
@@ -18,7 +18,6 @@ function Header() {
                 <button>Login</button>
                 <button>Register</button>
                 <p>Hire Talent</p>
-                <PersonIcon></PersonIcon>
             </div>
         </div>
         

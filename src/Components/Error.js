@@ -5,15 +5,15 @@ function Error() {
     const err = useRouteError();
   return (
     <>
-        <div className='h-screen bg-purple-100 flex align-middle justify-center items-center'>
-            <div className='bg-purple-100 text-center flex align-middle justify-center items-center'>
-                <img src="https://img.freepik.com/free-vector/bride-groom-getting-married_23-2148408200.jpg?size=626&ext=jpg&ga=GA1.1.693548172.1671363486&semt=ais" alt='errorimg' className='h-60 rounded-full'/>
+        <div className='h-screen bg-blue-800 flex align-middle justify-center items-center'>
+            <div className='bg-blu-800 text-center flex align-middle justify-center items-center'>
+                <img src="https://img.freepik.com/free-vector/internship-job-concept_23-2148721817.jpg?w=1380&t=st=1705740961~exp=1705741561~hmac=49bd503d88c5bbc44cb60b24811a06e1a4fe106c7eb2411fcb3e018de1e6a317" alt='errorimg' className='h-60 rounded-full'/>
                 <div className='p-3'>
-                    <h1 className='text-8xl font-extrabold text-purple-950'>{err.status}</h1>
-                    <h1 className='text-xl font-semibold text-purple-950'>Seems like we're in wrong venue </h1> 
-                    <h1 className='text-xl font-semibold text-purple-950'> Try another page ;) </h1>   
-                    <h2 className='text-md text-purple-950'>{err.statusText}</h2>
-                    <Link to="/"><button className='bg-purple-950 text-white p-4'> Back to Home</button></Link>
+                    <h1 className='text-8xl font-extrabold text-white'>{err.status}</h1>
+                    <h1 className='text-xl font-semibold text-slate-300'>Sorry you don't have the magic key </h1> 
+                    <h1 className='text-xl font-semibold text-slate-300'> to access this page ;) </h1>   
+                    <h2 className='text-md text-slate-300'>{err.statusText}</h2>
+                    <Link to="/"><button className='bg-blue-300 text-black p-4'> Back to Home</button></Link>
                 </div>
                 
             </div> 
