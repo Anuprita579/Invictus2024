@@ -18,7 +18,7 @@ import ProfileForm1 from './Components/ProfileForm1';
 import HireTalent from './Components/HireTalent';
 import ContactForm from './Components/ContactForm';
 import Filter from './Components/Filter';
-import ProfileCard from './Components/ProfileCard';
+import UpdateProfile from './Components/UpdateProfile';
 
 const appRouter = createBrowserRouter([
   {
@@ -79,8 +79,8 @@ const appRouter = createBrowserRouter([
         element: <Filter/>
       },
       {
-        path: "/profile",
-        element: <ProfileCard/>
+        path: "/updateprofile",
+        element: <UpdateProfile/>
       },
   
     ]

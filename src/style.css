@@ -369,3 +369,140 @@
     text-decoration: none; /* Added for button as link */
     display: inline-block; /* Added for button as link */
 }
+
+
+
+
+
+.profile-header {
+    /* background-color:  */
+    color: #3D9EF7;;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.header-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-picture-container {
+    text-align: center;
+    margin-top: -60px;
+    position: relative;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 4px solid #3D9EF7; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.profile-picture label {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-section {
+    padding: 20px;
+}
+
+.section-title {
+    color: #3D9EF7;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.user-input,
+.text-area {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    color: grey;
+    text-align: left;
+    background-color: transparent;
+}
+
+.user-input:focus,
+.text-area:focus {
+    border-bottom: 2px solid #3D9EF7;
+}
+
+.update-btn {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.selected-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.selected-skill {
+    background-color: #3D9EF7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-skill {
+    margin-left: 5px;
+    cursor: pointer;
+}

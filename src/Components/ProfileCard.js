@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ProfileCard() {
   return (
@@ -12,7 +13,7 @@ function ProfileCard() {
                 <strong>Email:</strong> john.doe@example.com
             </div>
             <div class="field">
-                <strong>LinkedIn Account:</strong> <a class="link" href="#" target="_blank">johndoe</a>
+                <strong>LinkedIn Account:</strong> johndoe
             </div>
             <div class="field">
                 <strong>LinkedIn Experience:</strong> 5 years
@@ -20,7 +21,7 @@ function ProfileCard() {
             <div class="field">
                 <strong>Interest:</strong> Web Development
             </div>
-            <a href="update.html" class="update-profile-btn">Update Profile</a>
+            <Link to="/updateprofile"> <button className='bg-blue-400 p-2 rounded-xl text-white'>Update Profile </button></Link>
         </div>
       
     </>

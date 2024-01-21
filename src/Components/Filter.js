@@ -36,78 +36,80 @@ const Filter = () => {
     return (
 
         <>
-            <form onSubmit={handleSubmit}>
+            <div className='w-full h-full flex flex-col justify-center items-center m-10'>
+            <form onSubmit={handleSubmit} className='bg-slate-100 flex flex-col justify-center items-center m-5 p-4'>
                 <div>
-                    <h2>Select a Category:</h2>
+                    <h2 className='text-xl font-semibold text-blue-800'>Select a Category:</h2>
+                    <div className='flex flex-col'>
+                            
+                        <label>
+                            <input
+                                type="radio"
+                                value="webdevelopment"
+                                checked={title === 'webdevelopment'}
+                                onChange={handleOptionChange}
+                                id="webdevelopmentOption"
+                            />
+                            Web Development
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            value="webdevelopment"
-                            checked={title === 'webdevelopment'}
-                            onChange={handleOptionChange}
-                            id="webdevelopmentOption"
-                        />
-                        Web Development
-                    </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="UI-UX"
+                                checked={title === 'UI-UX'}
+                                onChange={handleOptionChange}
+                                id="uiuxOption"
+                            />
+                            UI-UX
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            value="UI-UX"
-                            checked={title === 'UI-UX'}
-                            onChange={handleOptionChange}
-                            id="uiuxOption"
-                        />
-                        UI-UX
-                    </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="AI"
+                                checked={title === 'AI'}
+                                onChange={handleOptionChange}
+                                id="aiOption"
+                            />
+                            AI
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            value="AI"
-                            checked={title === 'AI'}
-                            onChange={handleOptionChange}
-                            id="aiOption"
-                        />
-                        AI
-                    </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="ML"
+                                checked={title === 'ML'}
+                                onChange={handleOptionChange}
+                                id="mlOption"
+                            />
+                            Machine Learning (ML)
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            value="ML"
-                            checked={title === 'ML'}
-                            onChange={handleOptionChange}
-                            id="mlOption"
-                        />
-                        Machine Learning (ML)
-                    </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="Database"
+                                checked={title === 'Database'}
+                                onChange={handleOptionChange}
+                                id="databaseOption"
+                            />
+                            Database
+                        </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            value="Database"
-                            checked={title === 'Database'}
-                            onChange={handleOptionChange}
-                            id="databaseOption"
-                        />
-                        Database
-                    </label>
-
-                    <p>Selected Category: {title}</p>
+                    </div>
+                    <p><span className='font-semibold text-blue-500'>You selected:</span> {title}</p>
                 </div>
 
                 <div className="experience-field">
                     <label className="experience-label">Experience Required</label>
                     <input onChange={handleOptionChange3} type="number" className="experience-input" id="experienceYears" placeholder="0" />
-                    <p>{exp}</p>
                 </div>
 
                 <div>
-                    <h2>Select a Location:</h2>
+                    <h2 className='text-xl font-semibold text-blue-800'>Select a Location:</h2>
 
-                    <label>
+                    <label className='mx-2'>
                         <input
                             type="radio"
                             value="hybrid"
@@ -118,7 +120,7 @@ const Filter = () => {
                         Hybrid
                     </label>
 
-                    <label>
+                    <label className='mx-2'>
                         <input
                             type="radio"
                             value="remote"
@@ -129,7 +131,7 @@ const Filter = () => {
                         Remote
                     </label>
 
-                    <label>
+                    <label className='mx-2'>
                         <input
                             type="radio"
                             value="onsite"
@@ -140,14 +142,15 @@ const Filter = () => {
                         Onsite
                     </label>
 
-                    <p>Selected Location: {type}</p>
+                    <p><span className='font-semibold text-blue-500'>You selected:</span> {type}</p>
                 </div>
 
-                <button type="submit" >Submit</button>
+                <button type="submit" className='bg-blue-400 m-4 p-2 rounded-xl px-4'>Submit</button>
             </form>
 
             <div>
                 {datab && <Database exp={exp} title={title} type={type} />}
+            </div>
             </div>
         </>
 

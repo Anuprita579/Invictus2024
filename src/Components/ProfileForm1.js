@@ -2,6 +2,7 @@ import React from 'react';
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import WorkIcon from '@mui/icons-material/Work';
+import ProfileCard from './ProfileCard';
 
 const sv = [
     {
@@ -47,6 +48,9 @@ function ProfileForm1() {
             <h1 className='text-5xl font-semibold text-white p-2 max-md:text-3xl'>Welcome Back! </h1>
             <p className='text-yellow-400'>Search for new opportunities and get hired! </p>
         </div> 
+        <div className=' flex justify-center'>
+            <ProfileCard />
+        </div>
         <div>
             <h1 className='text-center text-2xl font-semibold text-white p-4'>Saved Jobs</h1>
             <div className='flex flex-wrap w-full bg-blue-700 h-full justify-center'> 

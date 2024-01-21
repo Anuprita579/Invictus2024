@@ -27,11 +27,11 @@ const Database = ({ exp, title, type }) => {
 
   return (
     <div>
-      <h2>Data from Firestore:</h2>
+      <h2 className='text-xl font-bold'>Data from Firestore:</h2>
 
       {filteredData.map((item, index) => (
         <div key={index} className="outer-container">
-          <ul>
+          <ul className='bg-blue-300 m-4 p-2 width-full'>
             <li>
               <strong>ID:</strong> {item.id} <br />
               <strong>Experience:</strong> {item.exp} <br />
