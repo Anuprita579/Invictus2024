@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../style.css';
 import { Link } from 'react-router-dom';
+import Filter from './Filter';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -63,8 +64,6 @@ const ContactForm = () => {
         
         <button type="submit" className='bg-blue-500 p-2 rounded-xl'>Submit</button>
         </form>
-
-
 
         </div>
         

@@ -17,6 +17,8 @@ import OtpLogin from './Components/Login/OtpLogin';
 import ProfileForm1 from './Components/ProfileForm1';
 import HireTalent from './Components/HireTalent';
 import ContactForm from './Components/ContactForm';
+import Filter from './Components/Filter';
+import ProfileCard from './Components/ProfileCard';
 
 const appRouter = createBrowserRouter([
   {
@@ -71,6 +73,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/hire",
         element: <HireTalent/>
+      },
+      {
+        path: "/filter",
+        element: <Filter/>
+      },
+      {
+        path: "/profile",
+        element: <ProfileCard/>
       },
   
     ]

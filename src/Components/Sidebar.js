@@ -3,6 +3,7 @@ import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import CallIcon from '@mui/icons-material/Call';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
@@ -26,6 +27,13 @@ function Sidebar() {
         <div className='flex text-xl  mx-5 my-3 text-white max-sm:justify-center  hover:text-amber-200'>
             <CallIcon className='mx-4'></CallIcon>
             <h3 className='max-sm:hidden max-lg:hidden'>ContactUs</h3>
+        </div>
+        </Link>
+
+        <Link to="/filter"> 
+        <div className='flex text-xl  mx-5 my-3 text-white max-sm:justify-center  hover:text-amber-200'>
+            <FilterAltIcon className='mx-4'></FilterAltIcon>
+            <h3 className='max-sm:hidden max-lg:hidden'>Filter</h3>
         </div>
         </Link>
 

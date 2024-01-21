@@ -151,7 +151,7 @@ function Search() {
           </div>
 
 
-          <iframe src="https://www.google.com.qa/maps/d/u/0/embed?mid=18M6C0EywIdNz1Ji14xkF8lvcaUaA7sc&ehbc=2E312F&noprof=1" width="640" height="480" className='m-4 mb-10'></iframe>
+          <iframe src="https://www.google.com.qa/maps/d/u/0/embed?mid=18M6C0EywIdNz1Ji14xkF8lvcaUaA7sc&ehbc=2E312F&noprof=1" width="640" height="480" className='m-4 mb-10' title='internshipmap'></iframe>
   
             
                       
