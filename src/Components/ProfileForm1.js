@@ -1,8 +1,9 @@
 import React from 'react';
-import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
-import PaymentsIcon from '@mui/icons-material/Payments';
-import WorkIcon from '@mui/icons-material/Work';
 import ProfileCard from './ProfileCard';
+// import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
+// import PaymentsIcon from '@mui/icons-material/Payments';
+// import WorkIcon from '@mui/icons-material/Work';
+
 
 const sv = [
     {
@@ -41,7 +42,7 @@ const sv = [
 ]
 
 
-function ProfileForm1() {
+function ProfileForm1({name,email,linkedin,interest}) {
   return (
     <div className='w-full h-full bg-blue-700'>
         <div className='bg-gradient-to-br from-purple-700 to-blue-700 flex flex-col justify-center align-middle items-center p-6 py-10 w-full'>
@@ -49,7 +50,7 @@ function ProfileForm1() {
             <p className='text-yellow-400'>Search for new opportunities and get hired! </p>
         </div> 
         <div className=' flex justify-center'>
-            <ProfileCard />
+            <ProfileCard email={email} name={name} linkedin={linkedin} interest={interest} />
         </div>
         <div>
             <h1 className='text-center text-2xl font-semibold text-white p-4'>Saved Jobs</h1>
@@ -62,9 +63,9 @@ function ProfileForm1() {
                         <h1 className='text-slate-700'>{mlitem.company}</h1>
                         <h2>{mlitem.type}</h2>
                         <div className='flex'>
-                            <p className='m-2'> <PlayCircleFilledWhiteIcon/> {mlitem.start_date}</p>
+                            {/* <p className='m-2'> <PlayCircleFilledWhiteIcon/> {mlitem.start_date}</p>
                             <p className='m-2'> <PaymentsIcon /> {mlitem.ctc}</p>
-                            <p className='m-2'> <WorkIcon /> {mlitem.exp}</p>
+                            <p className='m-2'> <WorkIcon /> {mlitem.exp}</p> */}
                         </div>
                         <button className='bg-slate-400 text-white p-1'>{mlitem.post}</button>
                         <hr className='m-2'></hr>

@@ -2,6 +2,7 @@ import React from 'react';
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import WorkIcon from '@mui/icons-material/Work';
+import { Link } from 'react-router-dom';
 const ai = [
     {
         id: "001",
@@ -90,7 +91,9 @@ function ArtificialIntelligence() {
                         </div>
                         <button className='bg-slate-400 text-white p-1'>{mlitem.post}</button>
                         <hr className='m-2'></hr>
+                        <Link  to={`/companydetails/${mlitem.company}`}>
                         <button className='bg-indigo-700 text-white p-2 float-right'>Apply</button>
+                        </Link>
                     </div>
                 )
             })}

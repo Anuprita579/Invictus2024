@@ -19,6 +19,7 @@ import HireTalent from './Components/HireTalent';
 import ContactForm from './Components/ContactForm';
 import Filter from './Components/Filter';
 import UpdateProfile from './Components/UpdateProfile';
+import CompanyDetails from './Components/CompanyDetails';
 
 const appRouter = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/updateprofile",
         element: <UpdateProfile/>
+      },
+      {
+        path: "/companydetails/:companyname",
+        element: <CompanyDetails/>
       },
   
     ]

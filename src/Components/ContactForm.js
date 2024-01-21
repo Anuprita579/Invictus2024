@@ -24,6 +24,10 @@ const ContactForm = () => {
     // You can add your form submission logic here
   };
 
+  const handleClick = () =>{
+    alert("Message sent sucessfully")
+  }
+
   return (
     <>
         <div className='h-full w-full'> 
@@ -62,7 +66,7 @@ const ContactForm = () => {
             required
         />
         
-        <button type="submit" className='bg-blue-500 p-2 rounded-xl'>Submit</button>
+        <button type="submit" className='bg-blue-500 p-2 rounded-xl' onClick={handleClick}>Submit</button>
         </form>
 
         </div>

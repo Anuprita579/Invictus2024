@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState } from 'react';
+import Logo from "../assets/logo.jpg"
 import MachineLearning from './MachineLearning';
 
 export default function HireTalent() {
@@ -84,7 +85,7 @@ export default function HireTalent() {
     <>
         {!ML && <div className="container">
             <div className="left-container">
-                <img src="logo.png" alt="Your Image" />
+                <img src={Logo} alt="Your Image" />
                 <div className="text-boxes">
                     <h5 style={{ marginTop: "0" }}>Navigating Internship Horizons, Right at Your Fingertips</h5>
                 </div>
