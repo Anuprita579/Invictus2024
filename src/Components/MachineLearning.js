@@ -129,7 +129,7 @@ function MachineLearning({ element }) {
 
 
     useEffect(() => {
-        removeCompany('ax');
+        removeCompany('ygsygf');
     }, []);
 
 
